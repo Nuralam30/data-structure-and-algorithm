@@ -14,3 +14,8 @@ if(arr.indexOf(item) !== -1){
 else{
     console.log('item not found.')
 }
+
+
+// update value in array
+arr.splice(3, 1, 45);
+console.log(arr)
