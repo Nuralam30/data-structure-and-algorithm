@@ -1,10 +1,10 @@
 
-// bubbleSort.js
+// insertionSort.js
 
 var arr = [45, 34, 87, 26, 76, 18, 57];
 
-for(let i=0; i<arr.length; i++){
-    for(let j=arr.length -1; j>=i; j--){
+for (let i=1; i<arr.length; i++){
+    for (j=i; j>0; j--){
         if(arr[j] < arr[j-1]){
             var temp = arr[j];
             arr[j] = arr[j-1];
