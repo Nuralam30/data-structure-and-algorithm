@@ -1,5 +1,6 @@
 
 // selectionSort.js
+// find the smallest element and bring it to the first position
 
 var arr = [45, 34, 87, 26, 76, 18, 57];
 
