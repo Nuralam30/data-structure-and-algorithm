@@ -10,9 +10,9 @@ for (let i=0; i<arr.length-1; i++){
             arr[j] = arr[j-1];
             arr[j-1] = temp;
 
-            console.log(`${j} : arr[j] : ${arr[j]}`)
-            console.log(`${j-1} : arr[j + 1] : ${arr[j-1]}`)
+            // console.log(`${j} : arr[j] : ${arr[j]}`)
+            // console.log(`${j-1} : arr[j + 1] : ${arr[j-1]}`)
         }
     }
 }
-// console.log(arr)
+console.log(arr)
