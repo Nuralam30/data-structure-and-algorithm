@@ -53,18 +53,26 @@ function halfArr(n, len){
 
 var firstHalfArr = halfArr(firstHalf, firstStart)
 var secondHalfArr = halfArr(secondHalf, secondstart)
+console.log(firstHalfArr)
+console.log(secondHalfArr)
 
 
 function mergeSort(arr1,len1, arr2,len2){
     if(len1 == len2){
-        for(var i=0; i<firstHalf; i++){
-            if(arr1[i] > arr2[i]){
-                var temp = arr1[i];
-                arr1[i] = arr2[i]
-                arr2[i] = temp;
+      var n = firstHalf;
+      var totalArr = [];
+
+        for(var i=0; i<n; i++){
+            for( var j=i; j<n; j++){
+                if(arr1[i] > arr2[j]){
+                    totalArr.push(arr2[j]);
+                }
+                else{
+                    totalArr.push(arr1[i])
+                }
             }
         }
-        console.log(arr1.concat(arr2))
+        console.log(totalArr)
     }
 }
 
