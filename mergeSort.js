@@ -31,7 +31,7 @@ function halfArr(n, len){
             for(var i=firstHalf; i<arr.length; i++){
                 newArr.push(arr[i]);
             }
-            console.log(newArr);
+            return newArr;
     }
 
     else{
@@ -47,11 +47,25 @@ function halfArr(n, len){
         for(var i=0; i<n; i++){
             newArr.push(arr[i]);
         }
-        console.log(newArr);
+        return newArr;
     }
 }
-
 
 var firstHalfArr = halfArr(firstHalf, firstStart)
 var secondHalfArr = halfArr(secondHalf, secondstart)
 
+
+function mergeSort(arr1,len1, arr2,len2){
+    if(len1 == len2){
+        for(var i=0; i<firstHalf; i++){
+            if(arr1[i] > arr2[i]){
+                var temp = arr1[i];
+                arr1[i] = arr2[i]
+                arr2[i] = temp;
+            }
+        }
+        console.log(arr1.concat(arr2))
+    }
+}
+
+const result = mergeSort(firstHalfArr, firstHalf, secondHalfArr, secondHalf);
