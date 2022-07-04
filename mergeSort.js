@@ -1,7 +1,7 @@
 
 // mergeSort.js
 
-var arr = [45, 34, 87, 26, 76, 18, 57, 65];
+var arr = [45, 34, 87, 26, 76, 18, 57, 65, 95];
 
 if(arr.length == 1){
     return arr;
@@ -73,6 +73,30 @@ function mergeSort(arr1,len1, arr2,len2){
             }
             if(totalArr.indexOf(arr1[i]) == -1){
                 totalArr.push(arr1[i]);
+            }
+        }
+        console.log(totalArr)
+    }
+
+
+    if(len1 < len2){
+        var n = secondHalf;
+        var totalArr = [];
+
+        for(var i=0; i<n; i++){
+            for( var j=0; j<n; j++){
+                if(arr1[i] > arr2[j] && totalArr.indexOf(arr2[j]) == -1){
+                    totalArr.push(arr2[j]);
+                }
+                else if(arr1[i] < arr2[j] && totalArr.indexOf(arr1[i]) == -1){
+                    totalArr.push(arr1[i]);
+                }
+                else if(arr1[i] == 'undefined' && totalArr.indexOf(arr2[j]) == -1){
+                    totalArr.push(arr2[j]);
+                }
+            }
+            if(totalArr.indexOf(arr2[i]) == -1){
+                totalArr.push(arr2[i]);
             }
         }
         console.log(totalArr)
