@@ -63,12 +63,12 @@ function mergeSort(arr1,len1, arr2,len2){
       var totalArr = [];
 
         for(var i=0; i<n; i++){
-            for( var j=i; j<n; j++){
-                if(arr1[i] > arr2[j]){
+            for( var j=0; j<n; j++){
+                if(arr1[i] > arr2[j] && totalArr.indexOf(arr2[j]) == -1){
                     totalArr.push(arr2[j]);
                 }
-                else{
-                    totalArr.push(arr1[i])
+                else if(arr1[i] < arr2[j] && totalArr.indexOf(arr1[i]) == -1){
+                    totalArr.push(arr1[i]);
                 }
             }
         }
