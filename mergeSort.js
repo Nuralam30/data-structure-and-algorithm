@@ -71,6 +71,9 @@ function mergeSort(arr1,len1, arr2,len2){
                     totalArr.push(arr1[i]);
                 }
             }
+            if(totalArr.indexOf(arr1[i]) == -1){
+                totalArr.push(arr1[i]);
+            }
         }
         console.log(totalArr)
     }
