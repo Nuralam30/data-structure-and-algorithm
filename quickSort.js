@@ -45,6 +45,8 @@ function quickSort(arr, left, right) {
     }
     return arr;
 }
+
 // first call to quick sort
 var sortedArray = quickSort(arr, 0, arr.length - 1);
-console.log(sortedArray); //prints [2,3,5,6,7,9]
+console.log(sortedArray); 
+//prints [18, 26, 34, 45, 57, 65, 76, 87, 95]
