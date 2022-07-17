@@ -32,10 +32,21 @@ function partition(arr, left, right) {
     return i;
 }
 
+// 45, 34, 87, 26, 76, 18, 57, 65, 95
+// 45, 34, 65, 26, 76, 18, 57, 87, 95
+// 45, 34, 65, 26, 57, 18, 76, 87, 95
+// 45, 34, 18, 26, 57, 65, 76, 87, 95
+// 18, 34, 45, 26, 57, 65, 76, 87, 95
+// 18, 34, 26, 45, 57, 65, 76, 87, 95
+// 18, 26, 34, 45, 57, 65, 76, 87, 95
+// 18, 26, 34, 45, 57, 65, 76, 87, 95
+
+
 function quickSort(arr, left, right) {
     var index;
     if (arr.length > 1) {
         index = partition(arr, left, right); //index returned from partition
+        
         if (left < index - 1) { //more elements on the left side of the pivot
             quickSort(arr, left, index - 1);
         }
